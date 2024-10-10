@@ -1,0 +1,33 @@
+//Adding no. 1 to digit which is in form of arr
+import java.util.* 
+import java.io.*;
+import java.math.BigInteger; 
+
+public class Solution
+{
+    public static ArrayList<Integer> addOneToNumber(ArrayList<Integer> arr)
+    {
+        StringBuilder str = new StringBuilder();
+        for(int n : arr)
+        {
+            str.append(n);
+        }
+
+       
+        BigInteger digit = new BigInteger(str.toString());
+        BigInteger r = digit.add(BigInteger.ONE);
+
+
+        String s = r.toString();
+
+       
+        ArrayList<Integer> result = new ArrayList<>();
+        for(char c : s.toCharArray())
+        {
+            result.add(c - '0'); 
+        }
+
+        return result;
+    }
+
+}

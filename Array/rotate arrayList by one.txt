@@ -1,0 +1,15 @@
+//rotate arrayList by one  
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class Solution 
+{
+  public static void rotateLastElement(ArrayList<Integer> arr,int n)
+  {
+     int l = arr.remove(n-1);
+     arr.add(0,l);
+   
+  }
+}
+  

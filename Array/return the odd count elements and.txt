@@ -1,0 +1,27 @@
+// return the odd count elements and even count element (frequncey count)
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+class Solution {
+  public static int[] countEvenOdd(int[] arr,int n)
+   {
+       Map<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        Collection<Integer> frequencies = frequencyMap.values();
+         int cnt_even = 0, cnt_odd = 0;
+        for (int frequency : frequencies) {
+         if(frequency % 2 == 0)
+         {
+           cnt_even++;
+          }
+         else{
+           cnt_odd++;
+         }
+        }
+        int[] result = {cnt_odd,cnt_even};
+        return result;
+   }
+ }
